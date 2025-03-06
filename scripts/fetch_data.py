@@ -28,8 +28,10 @@ try:
 
     # fetch data:
     stock_data = yf.download(stock, start=from_date, end=to_date, interval=interval)
-
     print(f'Data for {stock} successfully saved to {data_path}!')
+
+    # Print top 5 rows:
+    print(stock_data.head())
 
     # Check if data is empty:
     if stock_data.empty:
