@@ -22,17 +22,37 @@ This project performs **real-time stock market analysis** using Python, APIs, SQ
 ```
 Real-Time-Stock-Market-Analysis/
 │── 📂 data/                        # Raw & processed data
-│── 📂 notebooks/                    # Jupyter Notebooks
-│── 📂 scripts/                      # Python scripts
+│   ├── raw_stock_data.csv          # Initial raw stock data
+│   ├── processed_stock_data.csv     # Cleaned & processed data
+│── 📂 notebooks/                    # Jupyter Notebooks for analysis
+│   ├── 01_data_collection.ipynb     # Fetching real-time & historical data
+│   ├── 02_data_preprocessing.ipynb  # Data cleaning & transformation
+│   ├── 03_EDA.ipynb                 # Exploratory Data Analysis (EDA)
+│   ├── 04_ML_Modeling.ipynb         # Regression & Time-Series Analysis
+│   ├── 05_model_evaluation.ipynb    # Model evaluation & hyperparameter tuning
+│── 📂 scripts/                      # Python scripts for automation
+│   ├── fetch_data.py                # Automate data collection (APIs)
+│   ├── preprocess_data.py           # Data cleaning and transformation
+│   ├── train_model.py               # Train ML models
+│   ├── predict.py                   # Make predictions using the trained model
+│   ├── deploy_api.py                 # Deploy API for real-time predictions
 │── 📂 reports/                      # Project reports & documentation
-│── 📂 dashboards/                   # Power BI / Tableau Dashboards
+│   ├── stock_market_analysis.pdf    # Final report
+│   ├── README.md                    # Project overview & instructions
+│── 📂 dashboards/                   # Visualization files
+│   ├── stock_dashboard.pbix         # Power BI dashboard
+│   ├── tableau_dashboard.twbx       # Tableau dashboard
 │── 📂 models/                       # Saved ML models
-│── 📂 deployment/                   # Deployment files (FastAPI, Docker)
+│   ├── lstm_model.h5                # Trained LSTM model
+│   ├── arima_model.pkl              # ARIMA model file
+│── 📂 deployment/                   # Deployment-related files
+│   ├── fastapi_app.py               # FastAPI app for real-time predictions
+│   ├── requirements.txt             # Dependencies for deployment
+│   ├── Dockerfile                   # Docker config for cloud deployment
 │── 📂 logs/                         # Logs for debugging
-│── README.md                        # Project overview
-│── .gitignore                        # Git ignored files
-│── requirements.txt                  # Python dependencies
-│── environment.yml                   # Conda environment file
+│── .gitignore                       # Ignore unnecessary files in GitHub
+│── environment.yml                   # Conda environment dependencies
+│── requirements.txt                   # Python dependencies
 ```
 
 ## 🔥 **Getting Started**
