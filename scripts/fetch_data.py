@@ -1,6 +1,7 @@
 # Importing Necessary libraries
 import pandas as pd
 import yfinance as yf
+import os
 
 # Fetch the listed stock
 # Testing
@@ -18,7 +19,8 @@ interval = input("Interval (1d/ 5d/ 1m/ 6m/ 1y/ 5y): ")
 """
 
 # Define File path (Dynamically Naming the File Based on Stock Symbol):
-data_path = f"data/raw_{stock.replace('^',"").replace(".", "_")}_data.csv" # Location to store
+data_filename = f"raw_{stock.replace('^',"").replace(".", "_")}_data.csv" # Location to store
+data_path = os.path.join("data", data_filename)
 
 # Fetch the historical stock data
 try:
